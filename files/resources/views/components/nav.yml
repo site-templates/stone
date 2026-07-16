@@ -2,17 +2,14 @@
 # surface under the Layout tab. Field names are camelCase, matching the props
 # they fill.
 title: Navigation
-description: The site-wide top bar — brand, page links, and the call to action
+description: The site-wide top bar — brand wordmark, theme toggle, and the fullscreen menu
 fields:
     brand:
         type: text
         label: Brand name
-        default: "Stone"
-    ctaText:
-        type: text
-        label: Button text
-        default: "Start a project"
-    ctaLink:
-        type: url
-        label: Button link
-        default: "/contact"
+        default: "stone"
+    menuNote:
+        type: textarea
+        label: Menu note
+        description: The short italic line about the studio inside the fullscreen menu.
+        default: "Stone is a calm, senior studio of fifteen — we take products from first sketch to shipped, and we finish what we start."

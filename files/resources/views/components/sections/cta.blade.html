@@ -6,22 +6,18 @@
 ])
 <!--
     The closing move: an ink-dark panel on the warm canvas with a single
-    action. Reused on several pages — each page can pass its own copy on
-    the section tag.
+    action — in dark mode it inverts to a paper panel on basalt, so it
+    always stands apart. Reused on several pages — each page can pass its
+    own copy on the section tag.
 -->
 <section id="cta" class="py-20 sm:py-28">
     <div class="mx-auto w-full max-w-6xl px-6">
         <div class="relative overflow-hidden rounded-3xl bg-ink px-8 py-16 text-center sm:px-16 sm:py-24" data-reveal>
             <div class="dot-grid pointer-events-none absolute inset-0 text-canvas"></div>
-            <div class="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[radial-gradient(ellipse_60%_100%_at_50%_0%,rgba(194,65,12,0.22),transparent_70%)]"></div>
+            <div class="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[radial-gradient(ellipse_60%_100%_at_50%_0%,rgba(194,65,12,0.22),transparent_70%)] dark:bg-[radial-gradient(ellipse_60%_100%_at_50%_0%,rgba(194,65,12,0.12),transparent_70%)]"></div>
 
             <div class="relative">
-                <svg viewBox="0 0 28 28" fill="none" class="mx-auto h-7 w-auto text-canvas" aria-hidden="true">
-                    <rect x="6" y="3" width="16" height="6" rx="3" fill="currentColor"/>
-                    <rect x="3" y="11" width="22" height="6" rx="3" fill="currentColor"/>
-                    <rect x="8" y="19" width="12" height="6" rx="3" fill="currentColor"/>
-                    <circle cx="24" cy="22" r="3" fill="#c2410c"/>
-                </svg>
+                <p class="font-sans text-2xl/none font-bold tracking-tight text-canvas lowercase" aria-hidden="true">stone<span class="text-accent dark:text-accent-deep">.</span></p>
 
                 <h2 class="mx-auto mt-8 max-w-[20ch] font-display text-3xl font-medium tracking-tight text-balance text-canvas sm:text-[2.75rem] sm:leading-[1.12]">{{ $heading }}</h2>
                 <p class="mx-auto mt-4 max-w-[46ch] text-lg/8 text-pretty text-canvas/70">{{ $body }}</p>

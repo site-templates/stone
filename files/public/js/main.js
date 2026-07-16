@@ -12,7 +12,8 @@ document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', function () {
     headerState();
-    mobileMenu();
+    menuOverlay();
+    themeToggle();
     revealOnScroll();
     markCurrentMenuItem();
     accordions();
@@ -39,27 +40,72 @@ function headerState() {
 }
 
 /*
-    The mobile menu: the hamburger toggles .menu-open on <html>, which slides
-    the paper sheet down and locks scrolling. Closing on navigation keeps
-    same-page anchors from leaving the sheet hanging open.
+    The fullscreen menu: the hamburger toggles .menu-open on <html>, which
+    fades the paper sheet in over the page and locks scrolling (see the
+    [data-menu] rules in site.css). Escape and the circled X both close it,
+    and focus hands back to the button that opened it.
 */
-function mobileMenu() {
-    const button = document.querySelector('[data-mobile-toggle]');
-    const panel = document.querySelector('[data-mobile-panel]');
+function menuOverlay() {
+    const toggle = document.querySelector('[data-menu-toggle]');
+    const overlay = document.querySelector('[data-menu]');
 
-    if (!button || !panel) {
+    if (!toggle || !overlay) {
         return;
     }
 
-    button.addEventListener('click', function () {
-        const open = document.documentElement.classList.toggle('menu-open');
-        button.setAttribute('aria-expanded', open ? 'true' : 'false');
+    const closeButton = overlay.querySelector('[data-menu-close]');
+
+    function setOpen(open) {
+        document.documentElement.classList.toggle('menu-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+        if (open && closeButton) {
+            closeButton.focus();
+        } else if (!open) {
+            toggle.focus();
+        }
+    }
+
+    toggle.addEventListener('click', function () {
+        setOpen(true);
     });
 
-    panel.querySelectorAll('a').forEach(function (link) {
+    if (closeButton) {
+        closeButton.addEventListener('click', function () {
+            setOpen(false);
+        });
+    }
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && document.documentElement.classList.contains('menu-open')) {
+            setOpen(false);
+        }
+    });
+
+    // Closing on navigation keeps same-page links from leaving the sheet open.
+    overlay.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
             document.documentElement.classList.remove('menu-open');
-            button.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
+/*
+    The light/dark switch. The layout head applies your saved theme before
+    first paint; these buttons (one in the bar, one inside the menu) flip the
+    .dark class and remember the choice for next visit.
+*/
+function themeToggle() {
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (button) {
+        button.addEventListener('click', function () {
+            const dark = document.documentElement.classList.toggle('dark');
+
+            try {
+                localStorage.setItem('theme', dark ? 'dark' : 'light');
+            } catch (error) {
+                // Private browsing may block storage — the toggle still works for this visit.
+            }
         });
     });
 }
@@ -103,7 +149,7 @@ function revealOnScroll() {
     active nav link (the nav styles target it).
 */
 function markCurrentMenuItem() {
-    document.querySelectorAll('#header a[href], [data-mobile-panel] a[href]').forEach(function (link) {
+    document.querySelectorAll('#header a[href]').forEach(function (link) {
         const path = window.location.pathname;
 
         if (link.pathname !== '/' && (path === link.pathname || path.startsWith(link.pathname + '/'))) {

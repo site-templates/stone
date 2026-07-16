@@ -1,7 +1,7 @@
 {
     "name": "Stone",
     "dialect": "blade",
-    "description": "A calm, confident studio site on warm paper — serif display headlines, numbered services, an ink-dark pricing tier, and hairline everything.",
+    "description": "A calm, confident studio site on warm paper — serif display headlines, a numbered fullscreen menu, an ink-dark pricing tier, and a remembered light/dark mode.",
     "icon": "🪨",
     "repo": "https://github.com/site-templates/stone",
     "order": 13,

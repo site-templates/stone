@@ -32,6 +32,34 @@
     --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/*
+    Dark mode is class-driven: a tiny script in the layout head reads your
+    saved preference and puts .dark on <html> before first paint, and the
+    moon/sun buttons in the top bar flip it. This line teaches Tailwind's
+    dark: utilities to follow that class.
+*/
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+    The dark theme: the same warm stone family, re-cut for night. Because
+    every color in the site is a token above, overriding the tokens here
+    restyles every bg-canvas, text-ink, and border-line automatically —
+    basalt canvas, paper text, and an ember-warmed terracotta.
+*/
+.dark {
+    --color-canvas: #161310;
+    --color-panel: #211d19;
+    --color-raised: #1c1916;
+    --color-line: #2f2a25;
+
+    --color-ink: #f2ede6;
+    --color-muted: #b3aba0;
+    --color-faint: #746c62;
+
+    --color-accent: #e0632e;
+    --color-accent-deep: #c2410c;
+}
+
 /* Cross-page navigation fades — the whole site feels like one surface. */
 @view-transition {
     navigation: auto;
@@ -46,6 +74,13 @@
 html {
     background-color: var(--color-canvas);
     scrollbar-color: #cfc9c0 transparent;
+    color-scheme: light;
+}
+
+/* Native controls — scrollbars, selects, form widgets — follow the theme. */
+html.dark {
+    scrollbar-color: #47403a transparent;
+    color-scheme: dark;
 }
 
 /* One stray wide element must never give the whole page a sideways scroll. */
@@ -62,6 +97,11 @@ body {
 ::selection {
     background-color: var(--color-accent);
     color: #fff7f2;
+}
+
+/* On the brighter night terracotta, dark text reads better than white. */
+.dark ::selection {
+    color: #1d0f06;
 }
 
 /* Reduce the default focus halo to a crisp accent ring. */
@@ -137,29 +177,49 @@ body {
     -webkit-backdrop-filter: blur(12px);
 }
 
-/* The mobile menu panel — slides down under the header as a paper sheet. */
-[data-mobile-panel] {
+/*
+    The fullscreen menu — Stone's signature. The hamburger toggles .menu-open
+    on <html> (see main.js): the sheet fades in over the page, its body
+    settles up into place, and scrolling locks underneath until it closes.
+*/
+[data-menu] {
     opacity: 0;
-    translate: 0 -8px;
     visibility: hidden;
     transition:
-        opacity 0.28s var(--ease-out-quart),
-        translate 0.28s var(--ease-out-quart),
-        visibility 0s linear 0.28s;
+        opacity 0.3s var(--ease-out-quart),
+        visibility 0s linear 0.3s;
 }
 
-.menu-open [data-mobile-panel] {
+[data-menu-body] {
+    translate: 0 18px;
+    transition: translate 0.3s var(--ease-out-quart);
+}
+
+.menu-open [data-menu] {
     opacity: 1;
-    translate: 0 0;
     visibility: visible;
     transition:
-        opacity 0.32s var(--ease-out-quart),
-        translate 0.32s var(--ease-out-quart),
+        opacity 0.35s var(--ease-out-quart),
         visibility 0s;
+}
+
+.menu-open [data-menu-body] {
+    translate: 0 0;
+    transition: translate 0.5s var(--ease-spring) 0.05s;
 }
 
 .menu-open {
     overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-menu],
+    [data-menu-body],
+    .menu-open [data-menu],
+    .menu-open [data-menu-body] {
+        translate: 0 0;
+        transition: none;
+    }
 }
 
 /* Smooth <details> opening for the expertise and FAQ accordions (Chrome; harmless elsewhere). */
@@ -191,6 +251,16 @@ details.fold summary::-webkit-details-marker {
         ellipse 65% 60% at 50% 0%,
         color-mix(in oklab, var(--color-accent) 7%, transparent) 0%,
         color-mix(in oklab, var(--color-accent) 3%, transparent) 45%,
+        transparent 75%
+    );
+}
+
+/* At night the bloom needs a touch more ember to register on basalt. */
+.dark .warm-glow {
+    background: radial-gradient(
+        ellipse 65% 60% at 50% 0%,
+        color-mix(in oklab, var(--color-accent) 11%, transparent) 0%,
+        color-mix(in oklab, var(--color-accent) 4%, transparent) 45%,
         transparent 75%
     );
 }

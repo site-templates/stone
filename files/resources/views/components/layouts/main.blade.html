@@ -10,16 +10,29 @@
 
     <link rel="icon" href="/favicon.png" type="image/png">
 
-    <!-- Fraunces carries the headlines, Hanken Grotesk the body, DM Mono the small numbered labels. -->
+    <!-- Fraunces carries the headlines (and the menu note's italic), Hanken Grotesk the body, DM Mono the small numbered labels. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..640&family=Hanken+Grotesk:wght@400..700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..640;1,9..144,400..640&family=Hanken+Grotesk:wght@400..700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Loads Tailwind and inlines resources/css/site.css (theme tokens + motion system) -->
     @vite('resources/css/site.css')
 
-    <!-- Flag JS support before first paint so scroll reveals never flash (see main.js) -->
-    <script>document.documentElement.classList.add('js')</script>
+    <!--
+        Two flags before first paint: .js so scroll reveals never flash, and
+        .dark when you chose the dark theme (or your device prefers it), so
+        the page never blinks white on load. The moon/sun buttons in the top
+        bar flip and remember the choice (see main.js).
+    -->
+    <script>
+        document.documentElement.classList.add('js');
+        try {
+            var theme = localStorage.getItem('theme');
+            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (error) {}
+    </script>
     <script src="/js/main.js" defer></script>
 </head>
 <body class="min-h-dvh bg-canvas font-sans text-ink antialiased">
