@@ -1,0 +1,23 @@
+title: Not found
+description: The 404 message with a way back home
+fields:
+    code:
+        type: text
+        label: Error code
+        default: "404"
+    heading:
+        type: text
+        label: Heading
+        default: "This page wandered off"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "The address may have changed, or the page may never have existed. Check the URL in the address bar, or head back to solid ground."
+    buttonText:
+        type: text
+        label: Button text
+        default: "Go back home"
+    buttonLink:
+        type: url
+        label: Button link
+        default: "/"

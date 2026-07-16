@@ -1,0 +1,23 @@
+title: About teaser
+description: A quiet editorial band about the studio, linking to the About page
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "The studio"
+    heading:
+        type: text
+        label: Heading
+        default: "Small by design, senior by default."
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "Stone is fifteen specialists who have shipped together for nine years — long enough to have opinions, small enough that you will know everyone on your project by name. We take on a handful of engagements at a time and give each one the attention a flagship deserves."
+    buttonText:
+        type: text
+        label: Button text
+        default: "Read about us"
+    buttonLink:
+        type: url
+        label: Button link
+        default: "/about"

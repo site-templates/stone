@@ -1,0 +1,19 @@
+title: Contact form
+description: The enquiry form with its introduction — presentation only until you wire it to a form service
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "The brief"
+    heading:
+        type: text
+        label: Heading
+        default: "Tell us about your project"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "A few honest lines are plenty — where the product is today, where it needs to be, and when. We read everything and reply to every enquiry within two business days."
+    buttonText:
+        type: text
+        label: Submit button text
+        default: "Send message"

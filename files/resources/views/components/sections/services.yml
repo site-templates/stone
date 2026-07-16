@@ -1,0 +1,15 @@
+title: Services
+description: Three numbered service cards from the services collection
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "Services"
+    heading:
+        type: text
+        label: Heading
+        default: "Everything a launch needs, in one team"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "Three phases, one accountable partner — the people who design your product are the people who build and keep it."

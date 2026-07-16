@@ -1,0 +1,17 @@
+[
+    {
+        "step": "01",
+        "name": "Design",
+        "description": "We start with the problem, not the pixels — research, flows, and prototypes that get tested on real people before a single screen is polished. What leaves this phase is a product people already understand."
+    },
+    {
+        "step": "02",
+        "name": "Develop",
+        "description": "The same team that designed it builds it, so nothing is lost in translation. Clean, well-tested code on a stack your own engineers will actually enjoy inheriting — shipped in small, visible increments."
+    },
+    {
+        "step": "03",
+        "name": "Maintain",
+        "description": "Launch is the start, not the finish. We stay on for the unglamorous work that keeps products good: monitoring, updates, performance budgets, and a roadmap that reflects what users actually do."
+    }
+]

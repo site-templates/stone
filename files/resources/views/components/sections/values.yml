@@ -1,0 +1,11 @@
+title: Values
+description: Numbered value cards from the values collection
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "Our values"
+    heading:
+        type: text
+        label: Heading
+        default: "Four things we won’t compromise"

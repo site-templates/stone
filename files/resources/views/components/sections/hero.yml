@@ -1,0 +1,43 @@
+# The visual editor's contract for sections/hero.blade.html: each field maps
+# to a prop in the component's props. Defaults fill any attribute the page
+# doesn't pass. Field names are camelCase, matching the props they fill.
+title: Hero
+description: The opening statement — availability badge, serif headline, two actions, and the studio photograph
+fields:
+    badgeText:
+        type: text
+        label: Availability badge
+        default: "Now booking new projects"
+    heading:
+        type: text
+        label: Heading
+        default: "We design and build your next digital experience"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "Stone is a senior team of designers and engineers who take products from first sketch to shipped — calmly, quickly, and without drama."
+    primaryText:
+        type: text
+        label: Primary button text
+        default: "Start a project"
+    primaryLink:
+        type: url
+        label: Primary button link
+        default: "/contact"
+    secondaryText:
+        type: text
+        label: Secondary button text
+        default: "View pricing"
+    secondaryLink:
+        type: url
+        label: Secondary button link
+        default: "/pricing"
+    image:
+        type: image
+        label: Hero photograph
+        description: A wide, calm image — shown at a 2:1 crop under the headline.
+        default: "/images/hero.webp"
+    imageAlt:
+        type: text
+        label: Hero image alt text
+        default: "A calm, sunlit studio workspace"

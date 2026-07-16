@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Floyd Lowe",
+        "role": "Founder & Creative Director",
+        "avatar": "https://assets.ui.sh/avatars/2.webp?size=640"
+    },
+    {
+        "name": "Emma Dorsey",
+        "role": "Principal Designer",
+        "avatar": "https://assets.ui.sh/avatars/8.webp?size=640"
+    },
+    {
+        "name": "Omar Haddad",
+        "role": "Engineering Lead",
+        "avatar": "https://assets.ui.sh/avatars/7.webp?size=640"
+    },
+    {
+        "name": "Priya Nair",
+        "role": "Product Strategist",
+        "avatar": "https://assets.ui.sh/avatars/1.webp?size=640"
+    },
+    {
+        "name": "Emily Mitchell",
+        "role": "Senior Developer",
+        "avatar": "https://assets.ui.sh/avatars/16.webp?size=640"
+    },
+    {
+        "name": "Jonas Beck",
+        "role": "Brand Designer",
+        "avatar": "https://assets.ui.sh/avatars/3.webp?size=640"
+    }
+]

@@ -1,0 +1,15 @@
+title: Testimonials
+description: Three quote cards from the testimonials collection
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "Kind words"
+    heading:
+        type: text
+        label: Heading
+        default: "Trusted by teams who ship"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "A few of the people we have built with, in their own words."

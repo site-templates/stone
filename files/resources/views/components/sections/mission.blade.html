@@ -1,0 +1,45 @@
+@props([
+    'eyebrow' => 'Our mission',
+    'heading' => 'Make the useful thing beautiful, and the beautiful thing work',
+    'bodyOne' => 'Stone started nine years ago with a simple irritation: software was either lovely and flimsy, or robust and joyless. We believed — and still believe — that people deserve tools that are both. That conviction shapes everything from how we scope a project to how we name a variable.',
+    'bodyTwo' => 'So we stay deliberately small, take on less than we could, and finish what we start. Every engagement gets senior people end to end, weekly work you can click on rather than read about, and a codebase your own team will be glad to inherit.',
+    'image' => '/images/about.webp',
+    'imageAlt' => 'Two colleagues reviewing work together in the studio',
+    'items',
+])
+<!--
+    The mission split: studio photograph on the left, the story on the right,
+    grounded by the numbers. The stats live in
+    resources/data/collections/stats.json.
+-->
+<section id="mission" class="py-20 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6">
+        <div class="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
+
+            <div class="relative" data-reveal>
+                <img src="{{ $image }}" alt="{{ $imageAlt }}" width="576" height="864" class="aspect-[3/4] w-full rounded-3xl object-cover shadow-xl shadow-ink/10 outline-1 -outline-offset-1 outline-ink/10 lg:sticky lg:top-28">
+            </div>
+
+            <div class="flex flex-col gap-10">
+                <div class="reveal-1" data-reveal>
+                    <p class="font-mono text-[11px] font-medium tracking-widest text-accent uppercase">{{ $eyebrow }}</p>
+                    <h2 class="mt-4 font-display text-3xl font-medium tracking-tight text-balance sm:text-[2.75rem] sm:leading-[1.12]">{{ $heading }}</h2>
+                    <div class="mt-6 flex flex-col gap-5 text-base/7 text-pretty text-muted sm:text-lg/8">
+                        <p>{{ $bodyOne }}</p>
+                        <p>{{ $bodyTwo }}</p>
+                    </div>
+                </div>
+
+                <dl class="stagger grid grid-cols-2 gap-4">
+                    @foreach ($items as $stat)
+                        <div class="rounded-3xl border border-line bg-panel p-6" data-reveal>
+                            <dd class="font-display text-4xl font-medium tracking-tight sm:text-5xl">{{ $stat->value }}</dd>
+                            <dt class="mt-2 text-sm text-muted">{{ $stat->label }}</dt>
+                        </div>
+                    @endforeach
+                </dl>
+            </div>
+
+        </div>
+    </div>
+</section>

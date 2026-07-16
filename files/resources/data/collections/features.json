@@ -1,0 +1,32 @@
+[
+    {
+        "ref": "01",
+        "name": "Digital experience platforms",
+        "description": "Sites and portals that stay fast at scale — content modelling, headless architectures, and editorial tooling your marketing team can run without calling us every Tuesday."
+    },
+    {
+        "ref": "02",
+        "name": "Web and mobile development",
+        "description": "Production applications for browser, iOS, and Android from one shared design system — a single product language everywhere your customers meet you."
+    },
+    {
+        "ref": "03",
+        "name": "Serverless and cloud platforms",
+        "description": "Infrastructure that scales to zero when it can and to millions when it must. We design for the bill as carefully as for the traffic spike."
+    },
+    {
+        "ref": "04",
+        "name": "Build and test automation",
+        "description": "Pipelines that make shipping boring, in the best way — every merge tested, previewed, and one click from production, so releases are a habit instead of an event."
+    },
+    {
+        "ref": "05",
+        "name": "Applied AI",
+        "description": "Practical machine intelligence where it earns its keep: search that understands intent, support that drafts itself, and models evaluated against your data before anyone ships a promise."
+    },
+    {
+        "ref": "06",
+        "name": "Full project support",
+        "description": "One accountable partner from kickoff to long after launch — strategy, design, engineering, and maintenance under a single roof, with no hand-offs to lose the plot in."
+    }
+]

@@ -1,0 +1,17 @@
+{
+    "name": "Stone",
+    "dialect": "blade",
+    "description": "A calm, confident studio site on warm paper — serif display headlines, numbered services, an ink-dark pricing tier, and hairline everything.",
+    "icon": "🪨",
+    "repo": "https://github.com/site-templates/stone",
+    "order": 13,
+    "category": "business",
+    "theme": "light",
+    "accent": "#c2410c",
+    "pages": [
+        "Home",
+        "About",
+        "Pricing",
+        "Contact"
+    ]
+}

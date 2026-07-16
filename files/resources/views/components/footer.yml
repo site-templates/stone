@@ -1,0 +1,11 @@
+title: Footer
+description: The site-wide footer — brand column, link columns, and the copyright line
+fields:
+    tagline:
+        type: textarea
+        label: Tagline
+        default: "A calm, senior product studio — strategy, design, and engineering for teams that care how things feel."
+    copyright:
+        type: text
+        label: Copyright line
+        default: "© 2026 Stone Studio"

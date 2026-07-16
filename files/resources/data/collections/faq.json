@@ -1,0 +1,26 @@
+[
+    {
+        "question": "How do I know which plan is right for me?",
+        "answer": "Start from where the work will live. Basic covers development, staging, and small production projects; Pro adds the headroom and support that high-traffic products need; Team is for organizations with security reviews, procurement, and performance targets. If you tell us your case on the contact page, we will give you a straight recommendation — even if the answer is the cheaper plan."
+    },
+    {
+        "question": "Can I upgrade, downgrade, or cancel at any time?",
+        "answer": "Yes. Plan changes take effect immediately and billing is prorated to the day, so you never pay twice for the same time. Cancelling stops the next renewal and your projects stay exportable — no lock-in, no retention phone call."
+    },
+    {
+        "question": "What does “lifetime access” mean exactly?",
+        "answer": "Everything you build on any plan remains yours to access forever, even if you stop subscribing. A paid plan buys capacity and support; it never holds your own work hostage."
+    },
+    {
+        "question": "What does “free updates” mean exactly?",
+        "answer": "Every improvement we ship — features, performance work, and security patches — lands on your plan at no extra charge, for as long as the plan exists. There is no versioned upgrade fee waiting at the end of the year."
+    },
+    {
+        "question": "Do you offer a free trial?",
+        "answer": "Every plan comes with a 14-day trial, no card required. If a trial period is not enough to evaluate against your own workload, tell us — we routinely extend trials for teams running a proper pilot."
+    },
+    {
+        "question": "How can I request support?",
+        "answer": "Basic includes the community forum, where our engineers answer most weekdays. Pro adds email support with a one-business-day response, and Team adds a shared chat channel with the people who actually built the product — not a ticket queue."
+    }
+]

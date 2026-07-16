@@ -1,0 +1,22 @@
+[
+    {
+        "ref": "01",
+        "name": "Excellence",
+        "description": "Good enough is a decision, and it is rarely the right one. We sweat the second-order details — the empty states, the error copy, the loading feel — because that is where products earn trust."
+    },
+    {
+        "ref": "02",
+        "name": "Innovation",
+        "description": "New for its own sake is noise. We adopt tools and techniques only when they make the work measurably better, and we prototype before we promise — curiosity with receipts."
+    },
+    {
+        "ref": "03",
+        "name": "Teamwork",
+        "description": "You work with the people doing the work. No account managers, no telephone game — designers, engineers, and your team in one room, disagreeing usefully and deciding quickly."
+    },
+    {
+        "ref": "04",
+        "name": "Respect",
+        "description": "For users, whose time and attention we never waste. For craft, which deserves better than shortcuts. And for each other — calm schedules, honest estimates, and no heroics culture."
+    }
+]

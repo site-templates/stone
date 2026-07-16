@@ -1,0 +1,18 @@
+# The visual editor's contract for components/nav.blade.html — these fields
+# surface under the Layout tab. Field names are camelCase, matching the props
+# they fill.
+title: Navigation
+description: The site-wide top bar — brand, page links, and the call to action
+fields:
+    brand:
+        type: text
+        label: Brand name
+        default: "Stone"
+    ctaText:
+        type: text
+        label: Button text
+        default: "Start a project"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "/contact"

@@ -1,0 +1,96 @@
+@props([
+    'brand' => 'Stone',
+    'ctaText' => 'Start a project',
+    'ctaLink' => '/contact',
+])
+<!--
+    The site-wide top bar. It rests transparent over each page's opening
+    section; once you scroll, main.js sets data-scrolled and site.css fades in
+    the paper-glass background and hairline. The mobile sheet keeps Stone's
+    numbered menu links from the original design.
+-->
+<header id="header" class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto flex h-16 w-full max-w-6xl items-center gap-6 px-6 sm:h-[4.5rem]">
+
+        <!-- href="/" always points to your site's root, in preview and when published -->
+        <a href="/" aria-label="Homepage" class="flex shrink-0 items-center gap-2.5 text-ink">
+            <!-- The mark: three balanced stones with a terracotta pebble -->
+            <svg viewBox="0 0 28 28" fill="none" class="h-6 w-auto shrink-0" aria-hidden="true">
+                <rect x="6" y="3" width="16" height="6" rx="3" fill="currentColor"/>
+                <rect x="3" y="11" width="22" height="6" rx="3" fill="currentColor"/>
+                <rect x="8" y="19" width="12" height="6" rx="3" fill="currentColor"/>
+                <circle cx="24" cy="22" r="3" fill="#c2410c"/>
+            </svg>
+            <span class="font-display text-xl font-semibold tracking-tight">{{ $brand }}</span>
+        </a>
+
+        <!-- Primary links, pushed to the right ahead of the call to action -->
+        <nav class="ml-auto max-md:hidden" aria-label="Main">
+            <ul role="list" class="flex items-center gap-1 text-sm font-medium text-muted">
+                <li>
+                    <a href="/about" class="rounded-full px-3.5 py-2 transition-colors duration-200 hover:text-ink aria-[current]:text-ink">About</a>
+                </li>
+                <li>
+                    <a href="/pricing" class="rounded-full px-3.5 py-2 transition-colors duration-200 hover:text-ink aria-[current]:text-ink">Pricing</a>
+                </li>
+                <li>
+                    <a href="/contact" class="rounded-full px-3.5 py-2 transition-colors duration-200 hover:text-ink aria-[current]:text-ink">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- The call to action -->
+        <a href="{{ $ctaLink }}" class="rounded-full bg-ink px-4.5 py-2 text-sm font-medium text-canvas transition-colors duration-200 hover:bg-accent max-md:hidden">{{ $ctaText }}</a>
+
+        <!-- Mobile: hamburger -->
+        <button
+            type="button"
+            data-mobile-toggle
+            aria-expanded="false"
+            aria-label="Toggle menu"
+            class="ml-auto flex size-10 cursor-pointer items-center justify-center rounded-full text-ink transition-colors duration-200 hover:bg-raised md:hidden">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" class="size-5 stroke-current [.menu-open_&]:hidden" aria-hidden="true">
+                <path stroke-linecap="round" d="M3.75 7h16.5M3.75 12h16.5M3.75 17h16.5"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" class="hidden size-5 stroke-current [.menu-open_&]:block" aria-hidden="true">
+                <path stroke-linecap="round" d="M6 18 18 6M6 6l12 12"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- The mobile sheet — numbered links, a nod to the original Stone menu -->
+    <div data-mobile-panel class="border-b border-line bg-canvas/95 backdrop-blur-xl md:hidden">
+        <nav class="mx-auto w-full max-w-6xl px-6 py-4" aria-label="Mobile">
+            <ul role="list" class="flex flex-col divide-y divide-line">
+                <li>
+                    <a href="/" class="group flex items-baseline gap-4 py-4 text-2xl font-medium tracking-tight text-ink">
+                        <span class="font-mono text-xs text-faint transition-colors duration-200 group-hover:text-accent">01</span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/about" class="group flex items-baseline gap-4 py-4 text-2xl font-medium tracking-tight text-ink">
+                        <span class="font-mono text-xs text-faint transition-colors duration-200 group-hover:text-accent">02</span>
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="/pricing" class="group flex items-baseline gap-4 py-4 text-2xl font-medium tracking-tight text-ink">
+                        <span class="font-mono text-xs text-faint transition-colors duration-200 group-hover:text-accent">03</span>
+                        Pricing
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact" class="group flex items-baseline gap-4 py-4 text-2xl font-medium tracking-tight text-ink">
+                        <span class="font-mono text-xs text-faint transition-colors duration-200 group-hover:text-accent">04</span>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <div class="border-t border-line py-4">
+                <a href="{{ $ctaLink }}" class="flex justify-center rounded-full bg-ink px-5 py-3 text-sm font-medium text-canvas transition-colors duration-200 hover:bg-accent">{{ $ctaText }}</a>
+            </div>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,19 @@
+title: Pricing table
+description: Three plan cards from the pricing collection — heading, copy, and footnote editable here
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "Plans"
+    heading:
+        type: text
+        label: Heading
+        default: "Simple pricing, no surprises"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "Every plan includes lifetime access to what you build. Upgrade, downgrade, or cancel whenever you like."
+    footnote:
+        type: text
+        label: Footnote
+        default: "Prices in USD. Annual billing saves two months on every plan."

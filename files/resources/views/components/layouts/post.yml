@@ -1,0 +1,22 @@
+# Field labels for the prose-page layout's chrome. Each page passes these as
+# attributes on its x-layouts.post tag; the body itself is authored markup.
+title: Prose page layout
+description: The shared chrome around a long-form page — eyebrow, title, and the updated line
+fields:
+    title:
+        type: text
+        label: Title
+        default: ""
+    description:
+        type: textarea
+        label: Meta description
+        default: ""
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "Legal"
+    updated:
+        type: text
+        label: Updated line
+        description: Leave empty to hide.
+        default: ""

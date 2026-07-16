@@ -1,0 +1,39 @@
+title: Contact details
+description: Address, phone, and email cards
+fields:
+    visitTitle:
+        type: text
+        label: Address card title
+        default: "Visit the studio"
+    addressLineOne:
+        type: text
+        label: Address line one
+        default: "742 Evergreen Terrace"
+    addressLineTwo:
+        type: text
+        label: Address line two
+        default: "Springfield, OR 12345"
+    callTitle:
+        type: text
+        label: Phone card title
+        default: "Call us"
+    phone:
+        type: text
+        label: Phone number
+        default: "+1 (555) 123-4567"
+    callNote:
+        type: text
+        label: Phone note
+        default: "Monday to Friday, 9–5 Pacific"
+    emailTitle:
+        type: text
+        label: Email card title
+        default: "Email us"
+    email:
+        type: text
+        label: Email address
+        default: "hello@example.com"
+    emailNote:
+        type: text
+        label: Email note
+        default: "For new projects and everything else"

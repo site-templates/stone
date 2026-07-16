@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Basic",
+        "blurb": "For development, staging, and small production projects.",
+        "price": "$10",
+        "period": "per month",
+        "featured": false,
+        "badge": "",
+        "buttonText": "Choose Basic",
+        "buttonLink": "/contact",
+        "features": [
+            "5 seats",
+            "1,000 projects",
+            "Lifetime access",
+            "Community support"
+        ]
+    },
+    {
+        "name": "Pro",
+        "blurb": "For high-scale and mission-critical projects.",
+        "price": "$25",
+        "period": "per month",
+        "featured": true,
+        "badge": "Most popular",
+        "buttonText": "Choose Pro",
+        "buttonLink": "/contact",
+        "features": [
+            "10 seats",
+            "10,000 projects",
+            "Lifetime access",
+            "Email support within one day",
+            "Free updates, forever"
+        ]
+    },
+    {
+        "name": "Team",
+        "blurb": "For teams with deeper security, support, and performance needs.",
+        "price": "Custom",
+        "period": "billed annually",
+        "featured": false,
+        "badge": "",
+        "buttonText": "Talk to us",
+        "buttonLink": "/contact",
+        "features": [
+            "Unlimited seats",
+            "Unlimited projects",
+            "Lifetime access",
+            "Email and chat support",
+            "High-performance infrastructure",
+            "Free updates, forever"
+        ]
+    }
+]

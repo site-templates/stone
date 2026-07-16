@@ -1,0 +1,19 @@
+title: Call to action
+description: The ink-dark closing panel with a single action
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Let’s make something amazing together"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "Tell us where your product needs to go. We will tell you, honestly, what it will take to get there."
+    buttonText:
+        type: text
+        label: Button text
+        default: "Start the conversation"
+    buttonLink:
+        type: url
+        label: Button link
+        default: "/contact"

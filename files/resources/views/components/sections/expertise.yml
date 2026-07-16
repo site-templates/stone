@@ -1,0 +1,15 @@
+title: Expertise
+description: An accordion of specialisms from the features collection
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "Expertise"
+    heading:
+        type: text
+        label: Heading
+        default: "Deep in the stack, fluent in the craft"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "Nine years of shipping has left us with strong opinions and stronger fundamentals. These are the areas where we do our best work."

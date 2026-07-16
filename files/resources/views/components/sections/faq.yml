@@ -1,0 +1,15 @@
+title: FAQ
+description: Accordion of questions from the faq collection
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "FAQ"
+    heading:
+        type: text
+        label: Heading
+        default: "Frequently asked questions"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "The things people usually want to know before choosing a plan. Anything else — just ask."

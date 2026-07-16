@@ -1,0 +1,28 @@
+title: Mission
+description: The studio photograph, the mission story, and the numbers from the stats collection
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "Our mission"
+    heading:
+        type: text
+        label: Heading
+        default: "Make the useful thing beautiful, and the beautiful thing work"
+    bodyOne:
+        type: textarea
+        label: First paragraph
+        default: "Stone started nine years ago with a simple irritation: software was either lovely and flimsy, or robust and joyless. We believed — and still believe — that people deserve tools that are both. That conviction shapes everything from how we scope a project to how we name a variable."
+    bodyTwo:
+        type: textarea
+        label: Second paragraph
+        default: "So we stay deliberately small, take on less than we could, and finish what we start. Every engagement gets senior people end to end, weekly work you can click on rather than read about, and a codebase your own team will be glad to inherit."
+    image:
+        type: image
+        label: Studio photograph
+        description: Shown tall at a 3:4 crop beside the story.
+        default: "/images/about.webp"
+    imageAlt:
+        type: text
+        label: Image alt text
+        default: "Two colleagues reviewing work together in the studio"

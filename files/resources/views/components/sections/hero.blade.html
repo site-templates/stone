@@ -1,0 +1,53 @@
+@props([
+    'badgeText' => 'Now booking new projects',
+    'heading' => 'We design and build your next digital experience',
+    'body' => 'Stone is a senior team of designers and engineers who take products from first sketch to shipped — calmly, quickly, and without drama.',
+    'primaryText' => 'Start a project',
+    'primaryLink' => '/contact',
+    'secondaryText' => 'View pricing',
+    'secondaryLink' => '/pricing',
+    'image' => '/images/hero.webp',
+    'imageAlt' => 'A calm, sunlit studio workspace',
+])
+<!--
+    The opening statement: an availability badge, the big serif headline,
+    supporting copy with two actions, then the full-width studio photograph.
+    Swap the image from the Visual editor — anything wide and calm works.
+-->
+<section id="hero" class="relative overflow-hidden pt-32 pb-16 sm:pt-44 sm:pb-20">
+    <div class="warm-glow pointer-events-none absolute inset-x-0 top-0 h-[28rem]"></div>
+
+    <div class="relative mx-auto w-full max-w-6xl px-6">
+
+        <p class="inline-flex items-center gap-2.5 rounded-full border border-line bg-panel px-3.5 py-1.5 text-[13px] font-medium text-muted" data-reveal>
+            <span class="relative flex size-2">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-40"></span>
+                <span class="relative inline-flex size-2 rounded-full bg-accent"></span>
+            </span>
+            {{ $badgeText }}
+        </p>
+
+        <h1 class="reveal-1 mt-8 max-w-[16ch] font-display text-5xl leading-[1.04] font-medium tracking-tight text-balance sm:text-7xl" data-reveal>
+            {{ $heading }}
+        </h1>
+
+        <div class="reveal-2 mt-8 flex flex-wrap items-center justify-between gap-x-12 gap-y-8 sm:mt-10" data-reveal>
+            <p class="max-w-[46ch] text-lg/8 text-pretty text-muted">{{ $body }}</p>
+
+            <div class="flex flex-wrap items-center gap-3">
+                <a href="{{ $primaryLink }}" class="rounded-full bg-ink px-6 py-3 text-[15px] font-medium text-canvas transition-colors duration-200 hover:bg-accent">{{ $primaryText }}</a>
+                <a href="{{ $secondaryLink }}" class="group inline-flex items-center gap-2 rounded-full border border-line bg-panel px-6 py-3 text-[15px] font-medium text-ink transition-colors duration-200 hover:border-faint">
+                    {{ $secondaryText }}
+                    <svg viewBox="0 0 16 16" class="size-3.5 fill-current opacity-50 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8Z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="reveal-3 mt-14 sm:mt-20" data-reveal>
+            <img src="{{ $image }}" alt="{{ $imageAlt }}" width="1280" height="640" class="aspect-[2/1] w-full rounded-3xl object-cover shadow-xl shadow-ink/10 outline-1 -outline-offset-1 outline-ink/10">
+        </div>
+
+    </div>
+</section>

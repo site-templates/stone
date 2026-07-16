@@ -1,0 +1,15 @@
+title: Team
+description: The portrait grid from the team collection
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "The team"
+    heading:
+        type: text
+        label: Heading
+        default: "The people you’ll actually work with"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "No account managers, no hand-offs. These are the specialists who answer your messages and ship your product."
