@@ -1,6 +1,6 @@
 <!--
     The privacy policy — served at "/privacy". This is a prose page: the
-    chrome comes from layouts/post.blade.html and the body below is plain
+    chrome comes from layouts/post.blade.php and the body below is plain
     HTML, styled by the .prose class in resources/css/site.css. Replace the
     copy with your own policy before you launch.
 -->
