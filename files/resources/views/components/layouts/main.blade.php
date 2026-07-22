@@ -1,6 +1,6 @@
 @props(['title' => 'Home', 'description' => ''])
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth {{ $site->theme->appearance_class ?? '' }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +13,10 @@
     <!-- Fraunces carries the headlines (and the menu note's italic), Hanken Grotesk the body, DM Mono the small numbered labels. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..640;1,9..144,400..640&family=Hanken+Grotesk:wght@400..700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="{{ $site->theme->fonts_url ?? 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..640;1,9..144,400..640&family=Hanken+Grotesk:wght@400..700&family=DM+Mono:wght@400;500&display=swap' }}" rel="stylesheet">
 
-    <!-- Loads Tailwind and inlines resources/css/site.css (theme tokens + motion system) -->
-    @vite('resources/css/site.css')
+    <!-- Loads Tailwind and inlines the theme tokens plus resources/css/site.css (motion system) -->
+    @vite(['resources/css/theme.css', 'resources/css/site.css'])
 
     <!--
         Two flags before first paint: .js so scroll reveals never flash, and

@@ -8,56 +8,34 @@
 */
 
 @theme {
-    --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
-    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
     --font-mono: 'DM Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
-    /* Warm paper, white cards, and the hairlines between them */
-    --color-canvas: #faf9f7;
-    --color-panel: #ffffff;
-    --color-raised: #f1eee9;
-    --color-line: #e7e2da;
+    /*
+        The palette, aliased onto the semantic theme tokens in
+        resources/css/theme.css — change the theme and every bg-canvas,
+        text-ink, and border-line follows. Sans/display fonts live there
+        too; theme.css also defines the class-based dark variant, whose
+        token overrides restyle the whole site for night. The layout's
+        saved-preference script and the moon/sun buttons flip .dark on
+        <html> exactly as before.
+    */
+    --color-canvas: var(--background);
+    --color-panel: var(--card);
+    --color-raised: var(--secondary);
+    --color-line: var(--border);
 
-    /* Text — warm stone from ink to whisper */
-    --color-ink: #1c1917;
-    --color-muted: #57534e;
-    --color-faint: #a29d96;
+    /* Text — ink to whisper */
+    --color-ink: var(--foreground);
+    --color-muted: var(--muted-foreground);
+    --color-faint: color-mix(in oklab, var(--muted-foreground) 55%, var(--background));
 
-    /* The accent — one measured pour of terracotta */
-    --color-accent: #c2410c;
-    --color-accent-deep: #9a3412;
+    /* The accent — one measured pour */
+    --color-accent: var(--primary);
+    --color-accent-deep: color-mix(in oklab, var(--primary) 85%, black);
 
     /* One easing for everything interactive: fast in, long soft settle */
     --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
     --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/*
-    Dark mode is class-driven: a tiny script in the layout head reads your
-    saved preference and puts .dark on <html> before first paint, and the
-    moon/sun buttons in the top bar flip it. This line teaches Tailwind's
-    dark: utilities to follow that class.
-*/
-@custom-variant dark (&:where(.dark, .dark *));
-
-/*
-    The dark theme: the same warm stone family, re-cut for night. Because
-    every color in the site is a token above, overriding the tokens here
-    restyles every bg-canvas, text-ink, and border-line automatically —
-    basalt canvas, paper text, and an ember-warmed terracotta.
-*/
-.dark {
-    --color-canvas: #161310;
-    --color-panel: #211d19;
-    --color-raised: #1c1916;
-    --color-line: #2f2a25;
-
-    --color-ink: #f2ede6;
-    --color-muted: #b3aba0;
-    --color-faint: #746c62;
-
-    --color-accent: #e0632e;
-    --color-accent-deep: #c2410c;
 }
 
 /* Cross-page navigation fades — the whole site feels like one surface. */

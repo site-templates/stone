@@ -8,6 +8,10 @@
     "category": "business",
     "theme": "light",
     "accent": "#c2410c",
+    "themeable": true,
+    "palette": "stone",
+    "fonts": "fraunces-hanken",
+    "appearance": "light",
     "pages": [
         "Home",
         "About",
