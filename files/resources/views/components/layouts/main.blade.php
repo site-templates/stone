@@ -8,7 +8,7 @@
     <title>{{ $title }} · Stone</title>
     <meta name="description" content="{{ $description }}">
 
-    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
     <!-- Fraunces carries the headlines (and the menu note's italic), Hanken Grotesk the body, DM Mono the small numbered labels. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
